@@ -10,17 +10,18 @@ import { motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
+import { Button } from './button'
 
 const links = [
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/pricing', label: 'Our Work' },
   { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/login', label: 'Login' },
+  { href: '/blog', label: 'Process' },
 ]
 
 function DesktopNav() {
   return (
     <nav className="relative hidden lg:flex">
+
       {links.map(({ href, label }) => (
         <PlusGridItem key={href} className="relative flex">
           <Link
@@ -31,6 +32,9 @@ function DesktopNav() {
           </Link>
         </PlusGridItem>
       ))}
+      <div className="h-full flex items-center justify-center ml-4 ">
+        <Button href="#" className='h-10' variant='secondary'>Contact Us</Button>
+      </div>
     </nav>
   )
 }
@@ -66,6 +70,20 @@ function MobileNav() {
             </Link>
           </motion.div>
         ))}
+        <motion.div
+          className=''
+          initial={{ opacity: 0, rotateX: -90 }}
+          animate={{ opacity: 1, rotateX: 0 }}
+          transition={{
+            duration: 0.15,
+            ease: 'easeInOut',
+            rotateX: { duration: 0.3, delay: 3 * 0.1 },
+          }}
+        >
+          <Link href='contact' className="text-base font-medium text-gray-950">
+            Contact Us
+          </Link>
+        </motion.div>
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
         <div className="absolute inset-x-0 top-0 border-t border-black/5" />
