@@ -75,26 +75,26 @@ const ServicesSection = () => {
           eyebrow="Blockchain"
           title="Web3 & Blockchain"
           description="Harness blockchain infrastructure to deliver secure and scalable decentralized solutions."
-          graphic={<LogoCluster />}
-          className="lg:col-span-2"
-        />
-        <BentoCard
-          eyebrow="Testing"
-          title="Quality Assurance (QA)"
-          description="Ensuring flawless performance of systems through meticulous testing and quality standards."
-          graphic={<Map />}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
-        />
-        <BentoCard
-          eyebrow="Support"
-          title="Technical Support"
-          description="Reliable support and maintenance services to ensure optimal system performance and seamless user experiences."
           graphic={
             <div className="flex size-full pt-10 pl-10">
               <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
             </div>
           }
           className="lg:col-span-2 lg:rounded-bl-4xl"
+        />
+        <BentoCard
+          eyebrow="Testing"
+          title="Quality Assurance (QA)"
+          description="Ensuring flawless performance of systems through meticulous testing and quality standards."
+          graphic={<LogoCluster />}
+          className="lg:col-span-2"
+        />
+        <BentoCard
+          eyebrow="Support"
+          title="Technical Support"
+          description="Reliable support and maintenance services to ensure optimal system performance and seamless user experiences."
+          graphic={<Map />}
+          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
     </Container>
