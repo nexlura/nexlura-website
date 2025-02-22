@@ -93,7 +93,7 @@ function MobileNav() {
   )
 }
 
-export function Navbar({ banner }: { banner?: React.ReactNode }) {
+export function Navbar() {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16">
       <PlusGrid>
@@ -104,11 +104,6 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
                 <Logo className="h-9" />
               </Link>
             </PlusGridItem>
-            {banner && (
-              <div className="relative hidden items-center py-3 lg:flex">
-                {banner}
-              </div>
-            )}
           </div>
           <DesktopNav />
           <MobileNavButton />

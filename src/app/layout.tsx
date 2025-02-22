@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - Nexlura',
+    default: 'Nexlura - Custom Software Solutions to Accelerate Your Growth'
   },
 }
 
