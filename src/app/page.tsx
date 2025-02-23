@@ -45,7 +45,6 @@ const ServicesSection = () => {
       <Heading as="h3" className="mt-2 max-w-3xl ">
         We design, build, and optmize technology that scales.
       </Heading>
-
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
           eyebrow="Build"
@@ -55,9 +54,6 @@ const ServicesSection = () => {
           graphic={
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
           }
-          // graphic={
-          //   <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
-          // }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
