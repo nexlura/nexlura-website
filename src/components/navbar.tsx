@@ -7,10 +7,11 @@ import {
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
+
 import { Link } from './link'
-import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 import { Button } from './button'
+import Logo from './logo'
 
 const links = [
   { href: '/pricing', label: 'Our Work' },
@@ -101,7 +102,7 @@ export function Navbar() {
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
               <Link href="/" title="Home">
-                <Logo className="h-9" />
+                <Logo />
               </Link>
             </PlusGridItem>
           </div>

@@ -1,10 +1,15 @@
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
+import { Subheading } from './text'
+
 import { Button } from './button'
 import { Container } from './container'
 import { Gradient } from './gradient'
 import { Link } from './link'
-import { Logo } from './logo'
-import { Subheading } from './text'
+import Image from 'next/image'
+import LogoText from '../../public/logo-files/small-word.png'
+import LogoIcon from '../../public/logo-files/logo-icon.png'
+import Logo from './logo'
+
 
 function CallToAction() {
   return (
@@ -156,7 +161,7 @@ export function Footer() {
               <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
                 <div className="col-span-2 flex">
                   <PlusGridItem className="pt-6 lg:pb-6">
-                    <Logo className="h-9" />
+                    <Logo />
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
