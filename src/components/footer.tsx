@@ -26,7 +26,7 @@ function CallToAction() {
         Leverage cutting-edge technology to streamline operations, and drive business growth.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
+        <Button className="w-full sm:w-auto h-10" href="/contact">
           Get started
         </Button>
       </div>
@@ -61,7 +61,7 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="#">About</SitemapLink>
           <SitemapLink href="/blog">Process</SitemapLink>
-          <SitemapLink href="/company">Contact Us</SitemapLink>
+          <SitemapLink href="/contact">Contact Us</SitemapLink>
         </SitemapLinks>
       </div>
       <div>

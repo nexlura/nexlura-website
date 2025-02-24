@@ -90,7 +90,7 @@ function ContactForm() {
                         </fieldset>
                     </div>
                 </div>
-                <Button type="submit" className="mt-10">
+                <Button type="submit" className="mt-10 h-10">
                     Let’s work together
                 </Button>
             </form>
