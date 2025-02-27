@@ -34,7 +34,7 @@ function DesktopNav() {
         </PlusGridItem>
       ))}
       <div className="h-full flex items-center justify-center ml-4 ">
-        <Button href="#" className='h-10' variant='secondary'>Contact Us</Button>
+        <Button href="/contact" className='h-10' variant='secondary'>Contact Us</Button>
       </div>
     </nav>
   )
@@ -81,7 +81,7 @@ function MobileNav() {
             rotateX: { duration: 0.3, delay: 3 * 0.1 },
           }}
         >
-          <Link href='contact' className="text-base font-medium text-gray-950">
+          <Link href='/contact' className="text-base font-medium text-gray-950">
             Contact Us
           </Link>
         </motion.div>

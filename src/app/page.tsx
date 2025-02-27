@@ -2,7 +2,7 @@ import SoftwareDevelopement from '@/components/SoftwareDev'
 import { BentoCard } from '@/components/bento-card'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
+import { Footer } from '@/components/Footer'
 import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
 import { LogoCluster } from '@/components/logo-cluster'
@@ -30,7 +30,7 @@ function Hero() {
             We help you build scalable, innovative software solutions that drive growth and efficiency.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#" className='h-10'>Get started</Button>
+            <Button href="/contact" className='h-10'>Get started</Button>
           </div>
         </div>
       </Container>
