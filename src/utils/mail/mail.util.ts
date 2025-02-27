@@ -13,7 +13,7 @@ type workInquiryMailType = {
     budget: string;
 };
 
-const mailer = async (from: string, to: string | null, subject: string, emailHTML: any) => {
+const mailer = async (from: any, to: string | null, subject: string, emailHTML: any) => {
     const transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: Number(process.env.MAIL_PORT) || 0,
@@ -47,7 +47,10 @@ const mailer = async (from: string, to: string | null, subject: string, emailHTM
 
 export const sendWorkInquiryMail = async (payload: workInquiryMailType) => {
     // mail configs
-    const from = `"Work Inquiry" <${payload.email}>`;
+    const from = {
+        name: "Work Inquiry",
+        address: "inquiry@nexlura.io"
+    };
     const to = "nexlura@gmail.com";
     const subject = "Work Inquiry Mail";
 
