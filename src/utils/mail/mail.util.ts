@@ -4,7 +4,14 @@ import pug from 'pug';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const rootdir = path.dirname(process.argv[1]);
+type workInquiryMailType = {
+    message: string;
+    name: string;
+    phone: string;
+    email: string;
+    company: string;
+    budget: string;
+};
 
 const mailer = async (from: string, to: string | null, subject: string, emailHTML: any) => {
     const transporter = nodemailer.createTransport({
@@ -36,15 +43,16 @@ const mailer = async (from: string, to: string | null, subject: string, emailHTM
         console.log(`Nodemailer error sending email to ${to}`, error);
         return error;
     }
-}
+};
 
-export const sendWorkInquiryMail = async (payload: any) => {
-    const from = '"Work Inquiry" <inquiry@nexlura.io>';
+export const sendWorkInquiryMail = async (payload: workInquiryMailType) => {
+    // mail configs
+    const from = `"Work Inquiry" <${payload.email}>`;
     const to = "nexlura@gmail.com";
     const subject = "Work Inquiry Mail";
 
     // get template
-    const templatePath = `${rootdir}/src/utils/mail/templates/work_inquiry_email.pug`;
+    const templatePath = `${process.cwd()}/src/utils/mail/templates/work_inquiry_email.pug`;
 
     // Compile a Pug template from a file to a function
     const compiledFunction = pug.compileFile(path.resolve(templatePath));

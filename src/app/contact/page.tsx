@@ -1,4 +1,3 @@
-import { useId, useState } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
@@ -8,7 +7,7 @@ import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import { ContactContainer } from '@/components/contactContainer'
-import { Footer } from '@/components/Footer'
+import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import { Container } from '@/components/container'
 import { Navbar } from '@/components/navbar'

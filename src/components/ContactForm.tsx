@@ -3,6 +3,7 @@
 import { useId, useState } from "react";
 import { FadeIn } from "./FadeIn";
 import { Button } from "./button";
+import {enqueueSnackbar} from "notistack";
 
 interface FormData {
     name: string;
@@ -104,7 +105,38 @@ const ContactForm = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (validateForm()) {
-            console.log("Form submitted successfully:", formData);
+            // make fetch request with post method and pass the body
+            fetch('api/contact', {
+              method: 'POST',
+              headers: {
+                'Content-type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data) {
+                    // clear form inputs
+                    setFormData({
+                        name: "",
+                        phone: "",
+                        email: "",
+                        company: "",
+                        message: "",
+                        budget: "",
+                    });
+
+                    // display notistack message
+                    enqueueSnackbar('Thanks for contacting! We will get back to you soon.', {
+                        variant: "success",
+                        autoHideDuration: 6000,
+                        anchorOrigin: { horizontal: 'right', vertical: 'bottom' }
+                    })
+                }
+              })
+              .catch((error) => {
+                console.error(error);
+              })
         }
     };
 
@@ -157,15 +189,15 @@ const ContactForm = () => {
                         <fieldset>
                             <legend className="text-base/6 text-neutral-500">Budget</legend>
                             <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                                <RadioInput label="$2K – $25K" name="budget" value="25" onChange={handleChange} />
-                                <RadioInput label="$25K – $50K" name="budget" value="50" onChange={handleChange} />
-                                <RadioInput label="$50K – $100K" name="budget" value="100" onChange={handleChange} />
-                                <RadioInput label="More than $100K" name="budget" value="150" onChange={handleChange} />
+                                <RadioInput label="$2K – $25K" name="budget" value="$2K – $25K" onChange={handleChange} />
+                                <RadioInput label="$25K – $50K" name="budget" value="$25K – $50K" onChange={handleChange} />
+                                <RadioInput label="$50K – $100K" name="budget" value="$50K – $100K" onChange={handleChange} />
+                                <RadioInput label="More than $100K" name="budget" value="More than $100K" onChange={handleChange} />
                             </div>
                         </fieldset>
                     </div>
                 </div>
-                <Button type="submit" className="mt-10 h-10">
+                <Button type="submit" className="mt-10 h-10 cursor-pointer">
                     Let’s work together
                 </Button>
             </form>
