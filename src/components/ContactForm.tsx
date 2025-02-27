@@ -40,7 +40,7 @@ function TextInput({
             />
             <label
                 htmlFor={id}
-                className={`pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950 ${error ? 'text-red-500' : 'text-neutral-500'} `}
+                className={`pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold ${error ? 'peer-focus:text-red-550' : 'peer-focus:text-gray-950'} peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold ${error ? 'peer-[:not(:placeholder-shown)]:text-red-550' : 'peer-[:not(:placeholder-shown)]:text-neutral-950'} ${error ? 'text-red-500' : 'text-neutral-500'} `}
             >
                 {error ? error : label}
             </label>
@@ -79,6 +79,7 @@ const ContactForm = () => {
     const [errors, setErrors] = useState<FormErrors>({});
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setErrors({ ...errors, [e.target.name]: false })
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -87,7 +88,11 @@ const ContactForm = () => {
 
         if (!formData.name.trim()) newErrors.name = "Name is required *";
         if (formData.email && !formData.email.includes("@")) newErrors.email = "Enter a valid email.";
-        if (formData.phone.length < 6) newErrors.phone = "Phone must be at least 6 characters";
+        if (!formData.phone.trim()) {
+            newErrors.phone = "Phone number is required.";
+        } else if (!/^\+?\d{9,}$/.test(formData.phone)) {
+            newErrors.phone = "Please enter a valid phone number";
+        }
         if (!formData.phone.trim()) newErrors.phone = "Phone is required *";
         if (!formData.message.trim()) newErrors.message = "Message is required *";
 
