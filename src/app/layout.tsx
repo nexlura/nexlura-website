@@ -1,6 +1,9 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
+import '../styles/index.css';
+
+
 export const metadata: Metadata = {
   title: {
     template: '%s - Nexlura',
