@@ -1,9 +1,10 @@
-import { Footer } from '@/components/Footer'
+import type { Metadata } from 'next'
+
 import { Container } from '@/components/container'
 import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
+import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Company',

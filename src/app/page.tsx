@@ -1,4 +1,3 @@
-import SoftwareDevelopement from '@/components/SoftwareDev'
 import { BentoCard } from '@/components/bento-card'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
