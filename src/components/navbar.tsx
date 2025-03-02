@@ -8,10 +8,10 @@ import {
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
 
-import { Link } from './link'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
-import { Button } from './button'
-import Logo from './logo'
+import { Link } from './Link'
+import { PlusGrid, PlusGridItem, PlusGridRow } from './PlusGrid'
+import { Button } from './Button'
+import Logo from './Logo'
 
 const links = [
   { href: '/pricing', label: 'Our Work' },

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
-import { Container } from '@/components/container'
-import { GradientBackground } from '@/components/gradient'
-import { Navbar } from '@/components/navbar'
+import { Container } from '@/components/Container'
+import { GradientBackground } from '@/components/Gradient'
+import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Footer } from '@/components/Footer'
 

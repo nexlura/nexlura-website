@@ -1,6 +1,6 @@
 import * as Headless from '@headlessui/react'
 import { clsx } from 'clsx'
-import { Link } from './link'
+import { Link } from './Link'
 
 const variants = {
   primary: clsx(
@@ -27,9 +27,9 @@ const variants = {
 type ButtonProps = {
   variant?: keyof typeof variants
 } & (
-  | React.ComponentPropsWithoutRef<typeof Link>
-  | (Headless.ButtonProps & { href?: undefined })
-)
+    | React.ComponentPropsWithoutRef<typeof Link>
+    | (Headless.ButtonProps & { href?: undefined })
+  )
 
 export function Button({
   variant = 'primary',
