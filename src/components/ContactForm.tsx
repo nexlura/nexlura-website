@@ -2,72 +2,72 @@
 
 import { useId, useState } from "react";
 import { FadeIn } from "./FadeIn";
-import { Button } from "./button";
-import {enqueueSnackbar} from "notistack";
+import { Button } from "./Button";
+import { enqueueSnackbar } from "notistack";
 
 interface FormData {
-    name: string;
-    email: string;
-    phone: string;
-    company: string;
-    budget: string;
-    message: string
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  budget: string;
+  message: string
 }
 
 interface FormErrors {
-    name?: string;
-    email?: string;
-    phone?: string;
-    company?: string;
-    budget?: string;
-    message?: string
+  name?: string;
+  email?: string;
+  phone?: string;
+  company?: string;
+  budget?: string;
+  message?: string
 }
 
 function TextInput({
-    label,
-    error,
-    ...props
+  label,
+  error,
+  ...props
 }: React.ComponentPropsWithoutRef<'input'> & { label: string, error?: string }) {
-    let id = useId()
+  let id = useId()
 
-    return (
-        <div className="group relative z-0 transition-all focus-within:z-10">
-            <input
-                type="text"
-                id={id}
-                {...props}
-                placeholder=" "
-                className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
-            />
-            <label
-                htmlFor={id}
-                className={`pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold ${error ? 'peer-focus:text-red-550' : 'peer-focus:text-gray-950'} peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold ${error ? 'peer-[:not(:placeholder-shown)]:text-red-550' : 'peer-[:not(:placeholder-shown)]:text-neutral-950'} ${error ? 'text-red-500' : 'text-neutral-500'} `}
-            >
-                {error ? error : label}
-            </label>
-        </div>
-    )
+  return (
+    <div className="group relative z-0 transition-all focus-within:z-10">
+      <input
+        type="text"
+        id={id}
+        {...props}
+        placeholder=" "
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+      />
+      <label
+        htmlFor={id}
+        className={`pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold ${error ? 'peer-focus:text-red-550' : 'peer-focus:text-gray-950'} peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold ${error ? 'peer-[:not(:placeholder-shown)]:text-red-550' : 'peer-[:not(:placeholder-shown)]:text-neutral-950'} ${error ? 'text-red-500' : 'text-neutral-500'} `}
+      >
+        {error ? error : label}
+      </label>
+    </div>
+  )
 }
 
 function RadioInput({
-    label,
-    ...props
+  label,
+  ...props
 }: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
-    return (
-        <label className="flex gap-x-3">
-            <input
-                type="radio"
-                {...props}
-                className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
-            />
-            <span className="text-base/6 text-neutral-950">{label}</span>
-        </label>
-    )
+  return (
+    <label className="flex gap-x-3">
+      <input
+        type="radio"
+        {...props}
+        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+      />
+      <span className="text-base/6 text-neutral-950">{label}</span>
+    </label>
+  )
 }
 
 
 const ContactForm = () => {
-    const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
@@ -105,7 +105,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (validateForm()) {
-        setIsLoading(true);
+      setIsLoading(true);
 
       // make fetch request with post method and pass the body
       fetch('api/contact', {
@@ -227,15 +227,15 @@ const ContactForm = () => {
           </div>
         </div>
 
-          {!isLoading ? (
-              <Button type="submit" className="mt-10 h-10 cursor-pointer">
-                  Let’s work together
-              </Button>
-          ) : (
-              <Button className="mt-10 h-10 cursor-pointer">
-                  <span className="loader"></span>
-              </Button>
-          )}
+        {!isLoading ? (
+          <Button type="submit" className="mt-10 h-10 cursor-pointer">
+            Let’s work together
+          </Button>
+        ) : (
+          <Button className="mt-10 h-10 cursor-pointer">
+            <span className="loader"></span>
+          </Button>
+        )}
       </form>
     </FadeIn>
   )

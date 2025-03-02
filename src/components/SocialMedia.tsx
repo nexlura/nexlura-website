@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import { SocialIconFacebook, SocialIconLinkedIn, SocialIconX } from './footer'
+import { SocialIconFacebook, SocialIconLinkedIn, SocialIconX } from './Footer'
 
 export const socialMediaProfiles = [
     { title: 'Facebook', href: 'https://facebook.com', icon: SocialIconFacebook },
