@@ -1,8 +1,7 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
-
 import '../styles/index.css';
-
+import {NotistackProvider} from './notistackProvider';
 
 export const metadata: Metadata = {
   title: {
@@ -23,9 +22,13 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
         />
-        <link rel="icon" href="/favicon.ico" sizes="24px" />
+        <link rel="icon" href="/src/app/faviconn.ico" sizes="24px" />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+        <NotistackProvider>
+            {children}
+        </NotistackProvider>
+      </body>
     </html>
   )
 }

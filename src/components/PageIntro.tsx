@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 
 import { FadeIn } from '@/components/FadeIn'
-import { ContactContainer } from './contactContainer'
-import { Heading, Subheading } from './text'
+import { ContactContainer } from './ContactContainer'
+import { Heading, Subheading } from './Text'
 
 export function PageIntro({
     eyebrow,
