@@ -55,23 +55,23 @@ function Sitemap() {
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">About</SitemapLink>
-          <SitemapLink href="/blog">Process</SitemapLink>
+          <SitemapLink href="/">Home</SitemapLink>
+          <SitemapLink href="/company">About Us</SitemapLink>
           <SitemapLink href="/contact">Contact Us</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Connect</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Facebook</SitemapLink>
-          <SitemapLink href="#">Twitter</SitemapLink>
-          <SitemapLink href="#">Instagram</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Work</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/pricing">Propati</SitemapLink>
+          <SitemapLink href="https://www.facebook.com/share/16GiVdnXPV/">
+            Facebook
+          </SitemapLink>
+          <SitemapLink href="https://x.com/nexlura?s=11&t=yVNK4m9yN7kSWJRV1ElKDA">
+            Twitter
+          </SitemapLink>
+          <SitemapLink href="https://www.linkedin.com/company/nexlura-llc">
+            LinkedIn
+          </SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -110,7 +110,7 @@ function SocialLinks() {
   return (
     <>
       <Link
-        href="https://www.facebook.com/share/18fHMbqR61/?mibextid=wwXIfr"
+        href="https://www.facebook.com/share/16GiVdnXPV/"
         target="_blank"
         aria-label="Visit us on Facebook"
         className="text-gray-950 data-hover:text-gray-950/75"
@@ -126,7 +126,7 @@ function SocialLinks() {
         <SocialIconX className="size-4" />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/company/nexlura-llc"
         target="_blank"
         aria-label="Visit us on LinkedIn"
         className="text-gray-950 data-hover:text-gray-950/75"

@@ -8,8 +8,8 @@ import { LogoCluster } from '@/components/LogoCluster'
 import { Map } from '@/components/Map'
 import { Heading, Subheading } from '@/components/Text'
 import { Button } from '@/components/Button'
-import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
   description:
