@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Container } from '@/components/Container'
 import { GradientBackground } from '@/components/Gradient'
 import { Navbar } from '@/components/Navbar'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Heading, Lead, Subheading } from '@/components/Text'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {

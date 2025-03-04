@@ -14,9 +14,7 @@ import { Button } from './Button'
 import Logo from './Logo'
 
 const links = [
-  { href: '/pricing', label: 'Our Work' },
   { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Process' },
 ]
 
 function DesktopNav() {

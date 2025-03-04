@@ -3,9 +3,9 @@ import clsx from 'clsx'
 import { SocialIconFacebook, SocialIconLinkedIn, SocialIconX } from './Footer'
 
 export const socialMediaProfiles = [
-    { title: 'Facebook', href: 'https://facebook.com', icon: SocialIconFacebook },
-    { title: 'Twitter', href: 'https://x.com', icon: SocialIconX },
-    { title: 'LinkedIn', href: 'https://linkedin.com', icon: SocialIconLinkedIn },
+    { title: 'Facebook', href: "https://www.facebook.com/share/16GiVdnXPV/", icon: SocialIconFacebook },
+    { title: 'Twitter', href: "https://x.com/nexlura?s=11&t=yVNK4m9yN7kSWJRV1ElKDA", icon: SocialIconX },
+    { title: 'LinkedIn', href: "https://www.linkedin.com/company/nexlura-llc", icon: SocialIconLinkedIn },
 ]
 
 export function SocialMedia({

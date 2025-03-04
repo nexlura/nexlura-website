@@ -11,7 +11,7 @@ import { Footer } from '@/components/Footer'
 import { GradientBackground } from '@/components/Gradient'
 import { Container } from '@/components/Container'
 import { Navbar } from '@/components/Navbar'
-import { Lead } from '@/components/text'
+import { Lead } from '@/components/Text'
 import ContactForm from '@/components/ContactForm'
 
 function ContactDetails() {

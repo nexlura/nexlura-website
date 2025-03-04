@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 
 import { BentoCard } from '@/components/BentoCard'
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Gradient } from '@/components/Gradient'
 import { Keyboard } from '@/components/Keyboard'
 import { LogoCluster } from '@/components/LogoCluster'
 import { Map } from '@/components/Map'
-import { Navbar } from '@/components/Navbar'
-import { Heading, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/Text'
+import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
+import { Navbar } from '@/components/Navbar'
 
 export const metadata: Metadata = {
   description:
