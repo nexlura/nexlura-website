@@ -19,14 +19,23 @@ function Header() {
       <Lead className="mt-6 max-w-3xl">
         We’re on a mission to transform businesses by using technology to drive efficiency, innovation, and sustainable growth.
       </Lead>
-      <section className="mt-16 grid grid-cols-1">
-        <div className="max-w-2xl">
+      <section className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="max-lg:order-first max-lg:max-w-lg">
+              <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+                  <img
+                      alt=""
+                      src="/company/mission.jpg"
+                      className="block size-full object-cover"
+                  />
+              </div>
+          </div>
+        <div className="max-w-2xl text-justify">
           <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
           <p className="mt-6 text-lg/6 text-gray-600">
             At NexLura, we are committed to transforming businesses by delivering high-quality,
-            customized software solutions and advanced AI tools.Our mission is to empower
+            customized software solutions and advanced AI tools. Our mission is to empower
             organizations with cutting-edge technology that enhances efficiency,fosters innovation,
-            and drives sustainable growth.By leveraging our deep expertise in software development
+            and drives sustainable growth. By leveraging our deep expertise in software development
             and AI integration,we help businesses modernize their operations and stay ahead in
             an ever-evolving digital landscape.
           </p>
@@ -56,7 +65,7 @@ function Team() {
         and user-friendly solutions backed by hands-on expertise.
       </Lead>
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div className="max-w-lg">
+        <div className="max-w-2xl text-justify">
           <p className="text-lg/6 text-gray-600">
             Some time ago, while working at a consulting firm, delivering solutions
             for top clients ranging from government institutions to NGOs.
@@ -74,7 +83,6 @@ function Team() {
             and intelligent software solutions, offering seamless integration and
             expert support in a single ecosystem.
           </p>
-
         </div>
         <div className="max-lg:order-first max-lg:max-w-lg">
           <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
