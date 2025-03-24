@@ -10,6 +10,7 @@ import { Heading, Subheading } from '@/components/Text'
 import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
+import SoftwareDev from "@/components/SoftwareDev";
 
 export const metadata: Metadata = {
   description:
@@ -43,7 +44,7 @@ const ServicesSection = () => {
     <Container>
       <Subheading>Services</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl ">
-        We design, build, and optmize technology that scales.
+        We design, build, and optimize technology that scales.
       </Heading>
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
@@ -51,9 +52,7 @@ const ServicesSection = () => {
           title="Software Developement"
           description="Comprehensive full-stack development services, including web, mobile, and cloud-based solutions, tailored to meet specific client needs.
           "
-          graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
-          }
+          graphic={<SoftwareDev />}
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
