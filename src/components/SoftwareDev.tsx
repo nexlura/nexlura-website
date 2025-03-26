@@ -60,7 +60,7 @@ const SoftwareDevelopment = () => {
                 divSize={190}
                 imgSize={180} />
             <Parts
-                src="/software-dev/right-objects-2.png"
+                src="/software-dev/right-objects.png"
                 top={-12}
                 offset={90}
                 delay={0.50}

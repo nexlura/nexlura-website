@@ -11,6 +11,7 @@ import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 import SoftwareDev from "@/components/SoftwareDev";
+import AIDevelopment from "@/components/AI";
 
 export const metadata: Metadata = {
   description:
@@ -60,8 +61,8 @@ const ServicesSection = () => {
           eyebrow="Data"
           title="AI & Machine Learning Solutions"
           description="Bespoke AI tools, data-driven insights, and machine learning models that drive business intelligence and operational efficiency."
-          graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+          graphic={ <AIDevelopment />
+            // <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
