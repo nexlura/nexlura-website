@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="128" height="128" rx="6" fill="#1e1e1e"/>
+  
+  <!-- Database -->
+  <g transform="translate(54, 90)">
+    <path d="M0,0 L20,0 L20,10 C20,15 0,15 0,10 Z" fill="#60a5fa"/>
+    <path d="M0,0 L20,0 L20,-8 C20,-3 0,-3 0,-8 Z" fill="#60a5fa"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- API Layer -->
+  <g transform="translate(44, 50)">
+    <rect x="0" y="0" width="40" height="20" rx="4" fill="#60a5fa"/>
+    <text x="20" y="14" fill="white" font-size="8" text-anchor="middle">API</text>
+  </g>
+  
+  <!-- Frontend -->
+  <g transform="translate(44, 10)">
+    <rect x="0" y="0" width="40" height="20" rx="4" fill="#60a5fa"/>
+    <text x="20" y="14" fill="white" font-size="8" text-anchor="middle">UI</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#60a5fa" stroke-width="2" fill="none">
+    <!-- UI to API -->
+    <path d="M64,30 L64,50">
+      <animate attributeName="stroke-dasharray" values="2,4;4,2" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <!-- API to DB -->
+    <path d="M64,70 L64,90">
+      <animate attributeName="stroke-dasharray" values="2,4;4,2" dur="1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Data Flow Particles -->
+  <circle cx="64" cy="40" r="2" fill="#60a5fa">
+    <animate attributeName="cy" values="30;50;30" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="64" cy="80" r="2" fill="#60a5fa">
+    <animate attributeName="cy" values="70;90;70" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Glow Effect -->
+  <rect x="0" y="0" width="128" height="128" rx="6" fill="url(#archGlow)" opacity="0.1"/>
+  <defs>
+    <radialGradient id="archGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 

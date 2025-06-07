@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Code Block Background -->
+  <rect x="0" y="0" width="128" height="128" rx="6" fill="#1e1e1e"/>
+  
+  <!-- Code Lines -->
+  <g font-family="monospace" font-size="10">
+    <!-- Function Declaration -->
+    <text x="10" y="20" fill="#569cd6">function</text>
+    <text x="55" y="20" fill="#dcdcaa">buildApp</text>
+    <text x="95" y="20" fill="#d4d4d4">()</text>
+    <text x="110" y="20" fill="#d4d4d4">{</text>
+    
+    <!-- Variable Declaration -->
+    <text x="20" y="40" fill="#569cd6">const</text>
+    <text x="50" y="40" fill="#4fc1ff">app</text>
+    <text x="70" y="40" fill="#d4d4d4">=</text>
+    <text x="85" y="40" fill="#4ec9b0">App</text>
+    <text x="105" y="40" fill="#d4d4d4">()</text>
+    
+    <!-- Method Call -->
+    <text x="20" y="60" fill="#4fc1ff">app</text>
+    <text x="45" y="60" fill="#d4d4d4">.</text>
+    <text x="55" y="60" fill="#dcdcaa">init</text>
+    <text x="75" y="60" fill="#d4d4d4">()</text>
+    
+    <!-- Return Statement -->
+    <text x="20" y="80" fill="#c586c0">return</text>
+    <text x="60" y="80" fill="#4fc1ff">app</text>
+    
+    <!-- Closing Brace -->
+    <text x="10" y="100" fill="#d4d4d4">}</text>
+  </g>
+  
+  <!-- Cursor -->
+  <rect x="65" y="75" width="1" height="12" fill="#d4d4d4">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Selection Highlight -->
+  <rect x="45" y="55" width="35" height="12" fill="#264f78" opacity="0.5"/>
+  
+  <!-- Glow Effect -->
+  <rect x="0" y="0" width="128" height="128" rx="6" fill="url(#codeGlow)" opacity="0.1"/>
+  <defs>
+    <radialGradient id="codeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 

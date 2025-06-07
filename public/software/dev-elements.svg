@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Development Symbols -->
+  <g fill="none" stroke="#60a5fa" stroke-width="2">
+    <!-- Code Brackets -->
+    <path d="M50,100 L30,120 L50,140" opacity="0.6"/>
+    <path d="M350,100 L370,120 L350,140" opacity="0.6"/>
+    
+    <!-- Function Symbol -->
+    <path d="M150,50 C170,50 170,70 150,70" opacity="0.4"/>
+    <path d="M150,70 L130,90" opacity="0.4"/>
+    
+    <!-- Database Symbol -->
+    <path d="M250,300 Q270,310 250,320 Q230,310 250,300" opacity="0.5"/>
+    <path d="M230,300 L270,300" opacity="0.5"/>
+    
+    <!-- API Endpoints -->
+    <path d="M100,200 L120,200 L120,220 L100,220 Z" opacity="0.4"/>
+    <path d="M300,200 L320,200 L320,220 L300,220 Z" opacity="0.4"/>
+    
+    <!-- Connection Lines -->
+    <g opacity="0.3">
+      <path d="M50,50 L150,150"/>
+      <path d="M250,50 L350,150"/>
+      <path d="M50,250 L150,350"/>
+      <path d="M250,250 L350,350"/>
+    </g>
+  </g>
+  
+  <!-- Floating Dots -->
+  <g fill="#60a5fa">
+    <circle cx="50" cy="50" r="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="50" r="3" opacity="0.6">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="350" r="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="350" r="3" opacity="0.6">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Moving Particles -->
+  <g fill="#60a5fa">
+    <circle cx="200" cy="100" r="2">
+      <animate attributeName="cy" values="100;300;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="200" r="2">
+      <animate attributeName="cx" values="100;300;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Code Symbols -->
+  <g fill="#60a5fa" opacity="0.4" font-family="monospace" font-size="14">
+    <text x="80" y="120">{}</text>
+    <text x="280" y="120">()</text>
+    <text x="80" y="280">[]</text>
+    <text x="280" y="280">/></text>
+  </g>
+</svg> 
