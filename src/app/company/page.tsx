@@ -1,115 +1,192 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Container } from '@/components/Container'
-import { GradientBackground } from '@/components/Gradient'
-import { Navbar } from '@/components/Navbar'
-import { Heading, Lead, Subheading } from '@/components/Text'
+import { Gradient } from '@/components/Gradient'
+import { Heading, Subheading } from '@/components/Text'
 import { Footer } from '@/components/Footer'
+import { Navbar } from '@/components/Navbar'
+import Mission from "@/components/Mission"
 
 export const metadata: Metadata = {
-  title: 'Company',
+  title: 'About Our Company | Nexlura',
   description:
-    'We’re on a mission to transform businesses by using technology to drive efficiency, innovation, and sustainable growth.',
+    'Learn about our mission, values, and commitment to helping businesses achieve more through innovative technology solutions.',
+  openGraph: {
+    title: 'About Our Company | Nexlura',
+    description: 'Learn about our mission, values, and commitment to helping businesses achieve more through innovative technology solutions.',
+    type: 'website',
+  },
 }
 
-function Header() {
+function Hero() {
   return (
-    <Container className="mt-16">
-      <Heading as="h1">Helping businesses do more.</Heading>
-      <Lead className="mt-6 max-w-3xl">
-        We’re on a mission to transform businesses by using technology to drive efficiency, innovation, and sustainable growth.
-      </Lead>
-      <section className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="max-lg:order-first max-lg:max-w-lg">
-              <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-                  <img
-                      alt=""
-                      src="/company/mission.jpg"
-                      className="block size-full object-cover"
-                  />
-              </div>
-          </div>
-        <div className="max-w-2xl text-justify">
-          <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
-          <p className="mt-6 text-lg/6 text-gray-600">
-            At NexLura, we are committed to transforming businesses by delivering high-quality,
-            customized software solutions and advanced AI tools. Our mission is to empower
-            organizations with cutting-edge technology that enhances efficiency,fosters innovation,
-            and drives sustainable growth. By leveraging our deep expertise in software development
-            and AI integration,we help businesses modernize their operations and stay ahead in
-            an ever-evolving digital landscape.
-          </p>
-          <p className="mt-8 text-lg/6 text-gray-600">
-            As a specialized software consulting company, NexLura was founded by experienced
-            software developers with a proven track record of providing technical solutions
-            and expert guidance. We are dedicated to offering tailored solutions that address
-            the unique challenges of our clients. With a strong foundation in consulting and
-            engineering support, we aim to bridge the gap between business needs and
-            technological advancement, ensuring long-term success for the companies we serve.
+    <div className="relative">
+      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+      <Container className="relative">
+        <Navbar />
+        <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+          <h1 className="font-display text-4xl/[1.3] font-medium tracking-tight text-balance text-gray-950 sm:text-5xl/[1.2] md:text-6xl/[1.1]">
+            Building the Future of Technology
+          </h1>
+          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
+            We're a team of innovators, problem-solvers, and technology enthusiasts dedicated to transforming businesses through software.
           </p>
         </div>
-      </section>
-    </Container>
+      </Container>
+    </div>
   )
 }
 
-function Team() {
+function MissionSection() {
   return (
-    <Container className="my-32">
-      <Subheading>Meet the team</Subheading>
-      <Heading as="h3" className="mt-2">
-        Founded by an all-star team.
-      </Heading>
-      <Lead className="mt-6 max-w-3xl">
-        NexLura is founded by experienced software developers delivering scalable
-        and user-friendly solutions backed by hands-on expertise.
-      </Lead>
-      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div className="max-w-2xl text-justify">
-          <p className="text-lg/6 text-gray-600">
-            Some time ago, while working at a consulting firm, delivering solutions
-            for top clients ranging from government institutions to NGOs.
-            Maej and Afiz saw an opportunity - businesses are struggling with
-            the lack of technical expertise to bring their ideas to life.
-            They had an idea: what if they built a company that combined deep technical
-            knowledge with a client-first approach to address this challenge?
-            That idea became the foundation of NexLura, a company dedicated to delivering
-            scalable and robust software solutions.
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <Subheading>Our Mission</Subheading>
+          <Heading as="h2" className="mt-2">
+            Helping businesses do more
+          </Heading>
+          <p className="mt-6 text-xl text-gray-600">
+            We're committed to empowering businesses with innovative technology solutions that drive growth, efficiency, and success. Our mission is to transform challenges into opportunities through cutting-edge software development.
           </p>
-          <p className="mt-8 text-lg/6 text-gray-600">
-            NexLura is on a mission to help businesses harness AI,
-            data and software solutions, to build scalable and efficient digital products.
-            The company aims to become a trusted partner for AI-driven automation
-            and intelligent software solutions, offering seamless integration and
-            expert support in a single ecosystem.
-          </p>
-        </div>
-        <div className="max-lg:order-first max-lg:max-w-lg">
-          <div className="aspect-3/2 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-            <img
-              alt=""
-              src="/company/5.jpg"
-              className="block size-full object-cover"
-            />
+          <div className="mt-8 flex gap-4">
+            <div className="rounded-2xl bg-gray-50 p-8">
+              <div className="text-base font-semibold text-gray-600">Projects Delivered</div>
+              <div className="mt-2 text-3xl font-bold text-gray-900">5+</div>
+            </div>
+            <div className="rounded-2xl bg-gray-50 p-8">
+              <div className="text-base font-semibold text-gray-600">Client Satisfaction</div>
+              <div className="mt-2 text-3xl font-bold text-gray-900">98%</div>
+            </div>
           </div>
+        </div>
+        <div className="relative">
+          <Mission />
         </div>
       </div>
-
     </Container>
   )
 }
 
+function Values() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Subheading>Our Values</Subheading>
+      <Heading as="h2" className="mt-2">
+        Principles that guide us
+      </Heading>
+      <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="rounded-3xl bg-gray-50 p-8">
+          <h3 className="text-lg font-semibold text-gray-900">Innovation First</h3>
+          <p className="mt-4 text-gray-600">
+            We constantly push boundaries and explore new technologies to deliver cutting-edge solutions.
+          </p>
+        </div>
+        <div className="rounded-3xl bg-gray-50 p-8">
+          <h3 className="text-lg font-semibold text-gray-900">Client Success</h3>
+          <p className="mt-4 text-gray-600">
+            Your success is our success. We're committed to delivering solutions that drive real business value.
+          </p>
+        </div>
+        <div className="rounded-3xl bg-gray-50 p-8">
+          <h3 className="text-lg font-semibold text-gray-900">Quality Excellence</h3>
+          <p className="mt-4 text-gray-600">
+            We maintain the highest standards in everything we do, from code quality to client communication.
+          </p>
+        </div>
+      </div>
+    </Container>
+  )
+}
+
+function TeamSection() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="space-y-16">
+        <div>
+          <Subheading>Our Story</Subheading>
+          <Heading as="h2" className="mt-2">
+            Founded on Innovation & Expertise
+          </Heading>
+        </div>
+
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div className="relative h-[32rem] transform overflow-hidden rounded-3xl">
+            <Image
+              alt="Nexlura Founders"
+              src="/team/founders.jpg"
+              width={1000}
+              height={1000}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/0" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <p className="text-lg font-medium">Afiz & Maej</p>
+              <p className="text-sm text-white/75">Co-Founders of Nexlura</p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <p className="text-lg leading-8 text-gray-600">
+                During their tenure at a prominent consulting firm, where they delivered solutions for government institutions and NGOs, Maej and Afiz identified a critical gap in the market: businesses were consistently struggling to find the technical expertise needed to transform their innovative ideas into reality.
+              </p>
+              <p className="text-lg leading-8 text-gray-600">
+                This observation sparked a vision: to create a company that would bridge this gap by combining deep technical expertise with an unwavering commitment to client success. This vision materialized into Nexlura, a company dedicated to delivering scalable and robust software solutions that drive real business value.
+              </p>
+            </div>
+
+            <div className="h-px bg-neutral-200" />
+
+            <div>
+              <p className="text-lg leading-8 text-gray-600">
+                Today, Nexlura stands at the forefront of technological innovation, with a clear mission: to empower businesses through the strategic integration of AI, data, and software solutions. We're building an ecosystem where cutting-edge technology meets practical business applications, offering seamless integration and expert support to help organizations build scalable and efficient digital products.
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <Link
+                href="https://www.linkedin.com/company/nexlura-llc"
+                target="_blank"
+                className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
+              >
+                <span>Follow on LinkedIn</span>
+              </Link>
+              <Link
+                href="https://twitter.com/nexlura"
+                target="_blank"
+                className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
+              >
+                <span>Follow on Twitter</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <p className="text-lg text-gray-600">
+            Together with our growing team of engineers, designers, and technology experts, we continue to push the boundaries of what's possible in software development and AI integration.
+          </p>
+        </div>
+      </div>
+    </Container>
+  )
+}
 
 export default function Company() {
   return (
-    <main className="overflow-hidden">
-      <GradientBackground />
-      <Container>
-        <Navbar />
-      </Container>
-      <Header />
-      <Team />
+    <div className="overflow-hidden">
+      <Hero />
+      <main>
+        <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
+          <MissionSection />
+          <Values />
+          <TeamSection />
+        </div>
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }
