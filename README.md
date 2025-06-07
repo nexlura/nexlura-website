@@ -1,52 +1,135 @@
-# Radiant
+# Nexlura Website
 
-Radiant is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org), with a blog powered by [Sanity](https://www.sanity.io).
+The official website for Nexlura, a cutting-edge software development company specializing in AI, blockchain, and enterprise solutions.
 
-## Getting started
+## Overview
 
-To get started with this template, first install the npm dependencies:
+Built with modern web technologies, the Nexlura website showcases our commitment to excellence in software development and technological innovation. The site features:
 
+- Responsive, modern design with smooth animations
+- Interactive service showcases
+- Optimized performance and accessibility
+- Enterprise-grade architecture
+
+## Technology Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) with App Router
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Type Safety**: [TypeScript](https://www.typescriptlang.org/)
+- **Components**: Custom-built React components
+- **Form Handling**: Server-side form processing with email integration
+
+## Key Features
+
+### Modern Design
+- Fluid animations and transitions
+- Responsive layouts for all devices
+- Custom-designed service illustrations
+- Interactive UI elements
+
+### Service Showcases
+- AI/ML Solutions visualization
+- Software Development presentation
+- Blockchain technology demonstration
+- QA Testing representation
+- Technical Support interface
+
+### Performance
+- Server-side rendering
+- Optimized asset loading
+- Efficient component architecture
+- Modern image optimization
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/nexlura/nexlura-website.git
+cd nexlura-website
+```
+
+2. Install dependencies:
 ```bash
 npm install
+# or
+yarn install
 ```
 
-Next, create a new Sanity project to power the blog within this template:
-
-```bash
-npm create sanity@latest -- --env=.env.local --create-project "Radiant Blog" --dataset production
-```
-
-This will prompt you to create a new Sanity account if you don't have one already. When asked "Would you like to add configuration files for a Sanity project in this Next.js folder?", choose "n".
-
-Next, optionally import the demo seed data for the blog:
-
-```bash
-npx sanity@latest dataset import seed.tar.gz
-```
-
-Next, run the development server:
-
+3. Start the development server:
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To manage your blog content, visit the embedded Sanity Studio at [http://localhost:3000/studio](http://localhost:3000/studio).
+### Environment Variables
 
-## Customizing
+Create a `.env.local` file in the root directory with the following variables:
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+SMTP_HOST=your-smtp-host
+SMTP_PORT=your-smtp-port
+SMTP_USER=your-smtp-user
+SMTP_PASSWORD=your-smtp-password
+```
+
+## Project Structure
+
+```
+nexlura-website/
+├── public/          # Static assets
+│   ├── ai/         # AI section assets
+│   ├── blockchain/ # Blockchain section assets
+│   └── team/       # Team photos and assets
+├── src/
+│   ├── app/        # Next.js app router pages
+│   ├── components/ # React components
+│   ├── styles/     # Global styles
+│   └── utils/      # Utility functions
+└── package.json    # Project dependencies
+```
+
+## Development
+
+### Code Style
+- TypeScript for type safety
+- ESLint for code linting
+- Prettier for code formatting
+- Component-based architecture
+
+### Best Practices
+- Semantic HTML
+- Accessibility standards
+- Performance optimization
+- Mobile-first approach
+
+## Deployment
+
+The website is configured for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically with git push
+
+## Contact
+
+For any inquiries about the website or Nexlura's services:
+
+- Email: nexlura@gmail.com
+- Phone: +232 79 712365 | +232 30 847661
+- LinkedIn: [Nexlura LLC](https://www.linkedin.com/company/nexlura-llc)
+- Twitter: [@nexlura](https://twitter.com/nexlura)
 
 ## License
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [Sanity](https://www.sanity.io) - the Sanity website
+Copyright © 2025 Nexlura LLC. All rights reserved.

@@ -2,43 +2,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-
-function Robot({
-                   src,
-                   top,
-                   offset,
-                   delay,
-                   divSize,
-                   imgSize,
-               }: {
-    src: string
-    top: number
-    offset: number
-    delay: number
-    divSize: number
-    imgSize: number
-}) {
-    return (
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: 0 }}
-        whileHover={{ y: -20 }}
-        transition={{
-          duration: 0.6,
-          ease: "easeInOut",
-        }}
-        style={{ '--offset': `${offset}px`, top } as React.CSSProperties}
-        className={`absolute left-[calc(50%+var(--offset))] size-[${divSize}px] drop-shadow-[0_3px_1px_rgba(0,0,0,.15)]`}
-      >
-        <img
-          alt=""
-          src={src}
-          className={`absolute top-[4px] left-[7px] size-[${imgSize}px]`}
-        />
-      </motion.div>
-    )
-}
-
 const AIDevelopment = () => {
     const [isHovered, setIsHovered] = useState(false)
     const [imagesLoaded, setImagesLoaded] = useState({

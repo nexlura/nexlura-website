@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import { FadeIn } from '@/components/FadeIn'
 import { ContactContainer } from './ContactContainer'
-import { Heading, Subheading } from './Text'
+import { Heading, Subheading } from './text'
 
 export function PageIntro({
     eyebrow,

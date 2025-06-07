@@ -1,9 +1,9 @@
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/PlusGrid'
-import { Subheading } from './Text'
+import { Subheading } from './text'
 import { Button } from './Button'
 import { Container } from './Container'
 import { Gradient } from './Gradient'
-import { Link } from './Link'
+import { Link } from './link'
 import Logo from './Logo'
 
 

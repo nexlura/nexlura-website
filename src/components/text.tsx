@@ -8,37 +8,44 @@ type HeadingProps = {
 >
 
 export function Heading({
-  className,
-  as: Element = 'h2',
+  as: Component = 'h1',
   dark = false,
+  className,
   ...props
 }: HeadingProps) {
   return (
-    <Element
-      {...props}
-      data-dark={dark ? 'true' : undefined}
+    <Component
       className={clsx(
         className,
-        'text-3xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-5xl',
+        'font-display text-4xl/[1.3] font-medium tracking-tight text-balance sm:text-5xl/[1.2]',
+        dark ? 'text-white' : 'text-gray-950',
       )}
+      {...props}
     />
   )
 }
 
+type SubheadingProps = {
+  as?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  dark?: boolean
+} & React.ComponentPropsWithoutRef<
+  'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+>
+
 export function Subheading({
-  className,
-  as: Element = 'h2',
+  as: Component = 'h2',
   dark = false,
+  className,
   ...props
-}: HeadingProps) {
+}: SubheadingProps) {
   return (
-    <Element
-      {...props}
-      data-dark={dark ? 'true' : undefined}
+    <Component
       className={clsx(
         className,
-        'font-mono text-xs/5 font-semibold tracking-widest text-gray-500 uppercase data-dark:text-gray-400',
+        'font-display text-sm font-medium tracking-wider',
+        dark ? 'text-white' : 'text-gray-950',
       )}
+      {...props}
     />
   )
 }
