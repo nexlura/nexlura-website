@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Arm Base -->
+  <path d="M16 40 L36 30 L56 35 L76 50 L66 60 L46 50 L26 45 Z" 
+        fill="none" stroke="#4fc3f7" stroke-width="2"/>
+  
+  <!-- Joint -->
+  <circle cx="46" cy="50" r="6" fill="none" stroke="#4fc3f7" stroke-width="2">
+    <animate attributeName="r" values="6;7;6" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Tech Details -->
+  <g stroke="#4fc3f7" stroke-width="1" opacity="0.6">
+    <line x1="66" y1="60" x2="56" y2="35"/>
+    <line x1="46" y1="50" x2="26" y2="45"/>
+    <line x1="76" y1="50" x2="16" y2="40"/>
+  </g>
+  
+  <!-- Energy Flow -->
+  <circle cx="46" cy="50" r="2" fill="#4fc3f7">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Pulse Effect -->
+  <circle cx="46" cy="50" r="10" fill="none" stroke="#4fc3f7" opacity="0.2">
+    <animate attributeName="r" values="10;12;10" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.3;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

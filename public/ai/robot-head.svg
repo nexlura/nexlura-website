@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head Base -->
+  <path d="M24 40 L64 20 L104 40 L104 88 L64 108 L24 88 Z" 
+        fill="#1a237e" stroke="#4fc3f7" stroke-width="2"/>
+  
+  <!-- Eyes -->
+  <g class="eyes">
+    <circle cx="48" cy="60" r="8" fill="#4fc3f7" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="60" r="8" fill="#4fc3f7" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Face Plate -->
+  <path d="M44 75 Q64 85 84 75" fill="none" stroke="#4fc3f7" stroke-width="2"/>
+  
+  <!-- Circuit Details -->
+  <g stroke="#4fc3f7" stroke-width="1" opacity="0.6">
+    <line x1="34" y1="40" x2="94" y2="40"/>
+    <line x1="64" y1="20" x2="64" y2="40"/>
+    <line x1="34" y1="88" x2="94" y2="88"/>
+  </g>
+  
+  <!-- Glowing Effect -->
+  <circle cx="64" cy="64" r="40" fill="none" stroke="#4fc3f7" opacity="0.2">
+    <animate attributeName="r" values="40;42;40" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.3;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

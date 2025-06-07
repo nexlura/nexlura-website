@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brain outline -->
+  <path d="M100 30 C 140 30, 170 60, 170 100 C 170 140, 140 170, 100 170 C 60 170, 30 140, 30 100 C 30 60, 60 30, 100 30" 
+        fill="none" stroke="#fff" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Circuit paths -->
+  <path d="M60 100 L140 100 M100 60 L100 140" stroke="#4fc3f7" stroke-width="2" opacity="0.8"/>
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#4fc3f7" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Nodes -->
+  <circle cx="100" cy="100" r="5" fill="#4fc3f7"/>
+  <circle cx="60" cy="100" r="4" fill="#4fc3f7"/>
+  <circle cx="140" cy="100" r="4" fill="#4fc3f7"/>
+  <circle cx="100" cy="60" r="4" fill="#4fc3f7"/>
+  <circle cx="100" cy="140" r="4" fill="#4fc3f7"/>
+  
+  <!-- Pulse animation -->
+  <circle cx="100" cy="100" r="20" fill="none" stroke="#4fc3f7" opacity="0.3">
+    <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg> 
