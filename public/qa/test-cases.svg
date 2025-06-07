@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Test Case Container -->
+  <rect x="8" y="8" width="80" height="80" rx="6" fill="#0f766e" stroke="#5eead4" stroke-width="2"/>
+  
+  <!-- Test Case Lines -->
+  <g stroke="#5eead4" stroke-width="1" opacity="0.8">
+    <line x1="20" y1="24" x2="76" y2="24"/>
+    <line x1="20" y1="36" x2="76" y2="36"/>
+    <line x1="20" y1="48" x2="76" y2="48"/>
+    <line x1="20" y1="60" x2="76" y2="60"/>
+  </g>
+  
+  <!-- Test Status Icons -->
+  <g fill="#5eead4">
+    <!-- Test 1 - Pass -->
+    <circle cx="28" cy="24" r="3">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M26,24 L27,25 L30,22" stroke="#0f766e" stroke-width="1"/>
+    
+    <!-- Test 2 - Pass -->
+    <circle cx="28" cy="36" r="3">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M26,36 L27,37 L30,34" stroke="#0f766e" stroke-width="1"/>
+    
+    <!-- Test 3 - Running -->
+    <circle cx="28" cy="48" r="3">
+      <animate attributeName="r" values="2;3;2" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Test 4 - Pending -->
+    <circle cx="28" cy="60" r="3" opacity="0.5"/>
+  </g>
+  
+  <!-- Test Names -->
+  <g fill="#5eead4" font-family="monospace" font-size="8">
+    <text x="40" y="26">test_login()</text>
+    <text x="40" y="38">test_auth()</text>
+    <text x="40" y="50">test_api()</text>
+    <text x="40" y="62">test_db()</text>
+  </g>
+  
+  <!-- Progress Indicator -->
+  <path d="M8,4 L88,4" stroke="#5eead4" stroke-width="2" stroke-dasharray="80">
+    <animate attributeName="stroke-dashoffset" values="80;0" dur="2s" fill="freeze"/>
+  </path>
+</svg> 

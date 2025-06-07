@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chat Window -->
+  <rect x="8" y="8" width="80" height="80" rx="6" fill="#1e40af" stroke="#93c5fd" stroke-width="2"/>
+  
+  <!-- Chat Header -->
+  <g transform="translate(16,16)">
+    <circle r="4" fill="#4ade80">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="12" y="4" fill="#93c5fd" font-family="monospace" font-size="10">Live Chat</text>
+  </g>
+  
+  <!-- Chat Messages -->
+  <g transform="translate(16,36)">
+    <!-- User Message -->
+    <rect x="0" y="0" width="40" height="12" rx="6" fill="#1d4ed8"/>
+    <text x="20" y="9" fill="#93c5fd" font-family="monospace" font-size="8" text-anchor="middle">Hello!</text>
+    
+    <!-- Support Message -->
+    <rect x="24" y="16" width="40" height="12" rx="6" fill="#2563eb"/>
+    <text x="44" y="25" fill="#93c5fd" font-family="monospace" font-size="8" text-anchor="middle">Hi there!</text>
+  </g>
+  
+  <!-- Typing Indicator -->
+  <g transform="translate(24,68)">
+    <circle cx="0" cy="0" r="2" fill="#93c5fd">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="0" r="2" fill="#93c5fd">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="16" cy="0" r="2" fill="#93c5fd">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Chat Actions -->
+  <g transform="translate(68,68)">
+    <circle r="4" fill="#1d4ed8" stroke="#93c5fd" stroke-width="1"/>
+    <path d="M-2,0 L2,0 M0,-2 L0,2" stroke="#93c5fd" stroke-width="1"/>
+  </g>
+  
+  <!-- Notification Badge -->
+  <g transform="translate(76,20)">
+    <circle r="6" fill="#ef4444">
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="2" fill="white" font-family="monospace" font-size="8" text-anchor="middle">1</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <path d="M8,4 L88,4" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+  <path d="M8,92 L88,92" stroke="#93c5fd" stroke-width="1" opacity="0.3"/>
+</svg> 

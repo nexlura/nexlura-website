@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- Report Container -->
+  <rect x="8" y="8" width="80" height="80" rx="6" fill="#0f766e" stroke="#5eead4" stroke-width="2"/>
+  
+  <!-- Bug Icon -->
+  <g transform="translate(48,40)">
+    <!-- Bug Body -->
+    <circle r="16" fill="#134e4a" stroke="#5eead4" stroke-width="2"/>
+    <!-- Antennae -->
+    <path d="M-8,-12 Q-12,-20 -8,-24" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <path d="M8,-12 Q12,-20 8,-24" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <!-- Legs -->
+    <path d="M-12,0 Q-20,0 -24,4" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <path d="M12,0 Q20,0 24,4" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <path d="M-10,8 Q-18,8 -22,12" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <path d="M10,8 Q18,8 22,12" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <!-- Eyes -->
+    <circle cx="-6" cy="-4" r="2" fill="#5eead4">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="6" cy="-4" r="2" fill="#5eead4">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Report Details -->
+  <g transform="translate(16,70)">
+    <rect width="64" height="12" rx="2" fill="#134e4a"/>
+    <text x="32" y="9" fill="#5eead4" font-family="monospace" font-size="8" text-anchor="middle">BUG-404</text>
+  </g>
+  
+  <!-- Status Indicator -->
+  <g transform="translate(68,16)">
+    <circle r="6" fill="#134e4a" stroke="#5eead4" stroke-width="1"/>
+    <circle r="3" fill="#5eead4">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Pulse Effect -->
+  <circle cx="48" cy="40" r="30" fill="none" stroke="#5eead4" opacity="0.2">
+    <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

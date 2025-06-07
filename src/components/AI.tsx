@@ -94,18 +94,12 @@ const AIDevelopment = () => {
             {/* Robot Head */}
             <motion.div
                 animate={{ 
-                    y: isHovered ? -15 : 0,
                     scale: isHovered ? 1.05 : 1,
-                    rotate: isHovered ? [0, -5, 5, 0] : 0
+                    y: isHovered ? -5 : 0
                 }}
                 transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    rotate: {
-                        duration: 2,
-                        repeat: Infinity,
-                        repeatType: "reverse"
-                    }
+                    duration: 0.4,
+                    ease: "easeOut"
                 }}
                 className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 border border-blue-400 bg-blue-900/20"
             >
@@ -120,11 +114,11 @@ const AIDevelopment = () => {
             <motion.div
                 animate={{ 
                     x: isHovered ? [-10, 0] : -10,
-                    rotate: isHovered ? [-10, 0] : -10,
+                    y: isHovered ? [-5, 0] : -5,
                     opacity: isHovered ? 1 : 0.7
                 }}
                 transition={{
-                    duration: 0.8,
+                    duration: 0.6,
                     ease: "easeOut"
                 }}
                 className="absolute left-[30%] top-[50%] border border-blue-400 bg-blue-900/20"
@@ -140,11 +134,11 @@ const AIDevelopment = () => {
             <motion.div
                 animate={{ 
                     x: isHovered ? [10, 0] : 10,
-                    rotate: isHovered ? [10, 0] : 10,
+                    y: isHovered ? [-5, 0] : -5,
                     opacity: isHovered ? 1 : 0.7
                 }}
                 transition={{
-                    duration: 0.8,
+                    duration: 0.6,
                     ease: "easeOut"
                 }}
                 className="absolute right-[30%] top-[50%] border border-blue-400 bg-blue-900/20"
@@ -159,12 +153,11 @@ const AIDevelopment = () => {
             {/* Body Core */}
             <motion.div
                 animate={{ 
-                    y: isHovered ? [10, 0] : 10,
                     scale: isHovered ? 1.1 : 1,
                     opacity: isHovered ? 1 : 0.7
                 }}
                 transition={{
-                    duration: 0.8,
+                    duration: 0.6,
                     ease: "easeOut"
                 }}
                 className="absolute left-1/2 top-[60%] -translate-x-1/2 border border-blue-400 bg-blue-900/20"
@@ -180,8 +173,7 @@ const AIDevelopment = () => {
             <motion.div
                 animate={{ 
                     rotate: 360,
-                    scale: isHovered ? 1.2 : 1,
-                    opacity: isHovered ? 0.8 : 0.4
+                    scale: isHovered ? 1.1 : 1
                 }}
                 transition={{
                     rotate: {
@@ -198,7 +190,7 @@ const AIDevelopment = () => {
                 <img
                     alt="Circuit Pattern"
                     src="/ai/circuit-overlay.svg"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-30"
                 />
             </motion.div>
 
