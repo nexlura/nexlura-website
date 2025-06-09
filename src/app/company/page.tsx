@@ -8,6 +8,7 @@ import { Heading, Subheading } from '@/components/text'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 import Mission from "@/components/Mission"
+import { InnovationBackground } from '@/components/InnovationBackground'
 
 export const metadata: Metadata = {
   title: 'About Our Company | Nexlura',
@@ -114,17 +115,19 @@ function TeamSection() {
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div className="relative h-[32rem] transform overflow-hidden rounded-3xl">
-            <Image
-              alt="Nexlura Founders"
-              src="/team/founders.jpg"
-              width={1000}
-              height={1000}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/75 via-neutral-950/0" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-              <p className="text-lg font-medium">Afiz & Maej</p>
-              <p className="text-sm text-white/75">Co-Founders of Nexlura</p>
+            <InnovationBackground />
+            <div className="relative z-10">
+              <Image
+                alt="Nexlura Founders"
+                src="/team/founders.png"
+                width={1000}
+                height={1000}
+                className="h-[32rem] w-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <p className="text-lg font-medium">Afiz & Muhammad</p>
+                <p className="text-sm text-white/75">Co-Founders of Nexlura</p>
+              </div>
             </div>
           </div>
 
