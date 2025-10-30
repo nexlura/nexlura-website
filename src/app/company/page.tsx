@@ -32,7 +32,7 @@ function Hero() {
             Building the Future of Technology
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            We're a team of innovators, problem-solvers, and technology enthusiasts dedicated to transforming businesses through software.
+            We&apos;re a team of innovators, problem-solvers, and technology enthusiasts dedicated to transforming businesses through software.
           </p>
         </div>
       </Container>
@@ -50,7 +50,7 @@ function MissionSection() {
             Helping businesses do more
           </Heading>
           <p className="mt-6 text-xl text-gray-600">
-            We're committed to empowering businesses with innovative technology solutions that drive growth, efficiency, and success. Our mission is to transform challenges into opportunities through cutting-edge software development.
+            We&apos;re committed to empowering businesses with innovative technology solutions that drive growth, efficiency, and success. Our mission is to transform challenges into opportunities through cutting-edge software development.
           </p>
           <div className="mt-8 flex gap-4">
             <div className="rounded-2xl bg-gray-50 p-8">
@@ -88,7 +88,7 @@ function Values() {
         <div className="rounded-3xl bg-gray-50 p-8">
           <h3 className="text-lg font-semibold text-gray-900">Client Success</h3>
           <p className="mt-4 text-gray-600">
-            Your success is our success. We're committed to delivering solutions that drive real business value.
+            Your success is our success. We&apos;re committed to delivering solutions that drive real business value.
           </p>
         </div>
         <div className="rounded-3xl bg-gray-50 p-8">
@@ -145,7 +145,7 @@ function TeamSection() {
 
             <div>
               <p className="text-lg leading-8 text-gray-600">
-                Today, Nexlura stands at the forefront of technological innovation, with a clear mission: to empower businesses through the strategic integration of AI, data, and software solutions. We're building an ecosystem where cutting-edge technology meets practical business applications, offering seamless integration and expert support to help organizations build scalable and efficient digital products.
+                Today, Nexlura stands at the forefront of technological innovation, with a clear mission: to empower businesses through the strategic integration of AI, data, and software solutions. We&apos;re building an ecosystem where cutting-edge technology meets practical business applications, offering seamless integration and expert support to help organizations build scalable and efficient digital products.
               </p>
             </div>
 
@@ -170,7 +170,7 @@ function TeamSection() {
 
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="text-lg text-gray-600">
-            Together with our growing team of engineers, designers, and technology experts, we continue to push the boundaries of what's possible in software development and AI integration.
+            Together with our growing team of engineers, designers, and technology experts, we continue to push the boundaries of what&apos;s possible in software development and AI integration.
           </p>
         </div>
       </div>
