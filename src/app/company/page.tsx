@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { Gradient } from '@/components/Gradient'
-import { Heading, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/CustomText'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 import Mission from "@/components/Mission"
