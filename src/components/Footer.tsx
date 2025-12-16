@@ -3,7 +3,7 @@ import { Subheading } from './Text'
 import { Button } from './Button'
 import { Container } from './Container'
 import { Gradient } from './Gradient'
-import { Link } from './link'
+import { Link } from './Link'
 import Logo from './Logo'
 
 

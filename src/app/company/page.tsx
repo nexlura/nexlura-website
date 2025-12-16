@@ -87,7 +87,7 @@ function MissionSection() {
           <div className="mt-8 flex gap-4">
             <div className="rounded-2xl bg-gray-50 p-8">
               <div className="text-base font-semibold text-gray-600">Projects Delivered</div>
-              <div className="mt-2 text-3xl font-bold text-gray-900">5+</div>
+              <div className="mt-2 text-3xl font-bold text-gray-900">10+</div>
             </div>
             <div className="rounded-2xl bg-gray-50 p-8">
               <div className="text-base font-semibold text-gray-600">Client Satisfaction</div>
