@@ -2,7 +2,7 @@
 
 import { clsx } from 'clsx'
 import { motion } from 'framer-motion'
-import { Subheading } from './CustomText'
+import { Subheading } from './Text'
 
 export function BentoCard({
   dark = false,

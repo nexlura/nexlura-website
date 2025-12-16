@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { BentoCard } from '@/components/BentoCard'
 import { Container } from '@/components/Container'
 import { Gradient } from '@/components/Gradient'
-import { Heading, Subheading } from '@/components/CustomText'
+import { Heading, Subheading } from '@/components/Text'
 import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
@@ -12,15 +12,55 @@ import AIDevelopment from "@/components/AI"
 import BlockchainDevelopment from "@/components/Blockchain"
 import QATesting from "@/components/QA"
 import TechnicalSupport from "@/components/Support"
+import { StructuredData } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'Custom Software Solutions | Nexlura',
+  title: 'Custom Software Development Services | AI, Blockchain & Enterprise Solutions',
   description:
-    'We help you build scalable, innovative software solutions that drive growth and efficiency.',
+    'Leading software development company in Freetown, Sierra Leone. We provide custom software development, AI & machine learning solutions, Web3 & blockchain development, QA testing, and technical support to businesses worldwide. Get scalable, innovative software solutions that drive growth.',
+  keywords: [
+    'custom software development',
+    'software development services',
+    'AI machine learning solutions',
+    'Web3 blockchain development',
+    'quality assurance testing',
+    'technical support services',
+    'offshore software development',
+    'software outsourcing company',
+    'full-stack development services',
+    'enterprise software solutions',
+    'cloud-based software development',
+    'digital transformation services',
+    'software consulting company',
+    'Freetown software developers',
+    'Sierra Leone software company',
+    'custom software solutions',
+    'web development services',
+    'mobile app development',
+    'software engineering services',
+    'IT consulting services',
+  ],
   openGraph: {
-    title: 'Custom Software Solutions | Nexlura',
-    description: 'We help you build scalable, innovative software solutions that drive growth and efficiency.',
+    title: 'Custom Software Development Services | AI, Blockchain & Enterprise Solutions - Nexlura',
+    description: 'Leading software development company providing custom software, AI/ML, blockchain, QA testing, and technical support to businesses worldwide.',
     type: 'website',
+    url: '/',
+    images: [
+      {
+        url: '/logo-files/logo-icon.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nexlura - Custom Software Development Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Software Development Services | Nexlura',
+    description: 'Leading software development company providing AI, blockchain, and enterprise solutions worldwide.',
+  },
+  alternates: {
+    canonical: '/',
   },
 }
 
@@ -125,9 +165,71 @@ function WhyChooseUs() {
   )
 }
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Software Development Services',
+  provider: {
+    '@type': 'Organization',
+    name: 'Nexlura',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nexlura.com',
+  },
+  areaServed: {
+    '@type': 'Place',
+    name: 'Worldwide',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Software Development Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Software Development',
+          description: 'Comprehensive full-stack development services, including web, mobile, and cloud-based solutions',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI & Machine Learning Solutions',
+          description: 'Bespoke AI tools, data-driven insights, and machine learning models that drive business intelligence',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Web3 & Blockchain Development',
+          description: 'Secure and scalable decentralized solutions using blockchain infrastructure',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Quality Assurance (QA)',
+          description: 'Meticulous testing and quality standards to ensure flawless system performance',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Technical Support',
+          description: 'Reliable support and maintenance services for optimal system performance',
+        },
+      },
+    ],
+  },
+}
+
 export default function Home() {
   return (
     <div className="overflow-hidden">
+      <StructuredData data={servicesSchema} />
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
