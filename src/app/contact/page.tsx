@@ -11,7 +11,7 @@ import { Footer } from '@/components/Footer'
 import { GradientBackground } from '@/components/Gradient'
 import { Container } from '@/components/Container'
 import { Navbar } from '@/components/Navbar'
-import { Lead } from '@/components/text'
+import { Lead } from '@/components/CustomText'
 import ContactForm from '@/components/ContactForm'
 
 function ContactDetails() {
@@ -74,8 +74,44 @@ function ContactDetails() {
 }
 
 export const metadata: Metadata = {
-    title: 'Contact Us',
-    description: 'Let’s work together. We can’t wait to hear from you.',
+    title: 'Contact Nexlura | Get Custom Software Development Quote | Freetown, Sierra Leone',
+    description: 'Contact Nexlura for custom software development, AI solutions, blockchain development, QA testing, and technical support. Based in Freetown, Sierra Leone, serving clients worldwide. Get a free consultation today.',
+    keywords: [
+        'contact nexlura',
+        'software development quote',
+        'custom software consultation',
+        'freetown software company contact',
+        'sierra leone software developers',
+        'software development inquiry',
+        'AI development services contact',
+        'blockchain development consultation',
+        'QA testing services contact',
+        'technical support contact',
+        'offshore software development contact',
+        'software outsourcing inquiry',
+    ],
+    openGraph: {
+        title: 'Contact Nexlura | Get Custom Software Development Quote',
+        description: 'Contact Nexlura for custom software development, AI solutions, blockchain development, and technical support. Serving clients worldwide from Freetown, Sierra Leone.',
+        type: 'website',
+        url: '/contact',
+        images: [
+            {
+                url: '/logo-files/logo-icon.png',
+                width: 1200,
+                height: 630,
+                alt: 'Contact Nexlura - Software Development Company',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Contact Nexlura | Software Development Company',
+        description: 'Get in touch for custom software development, AI, blockchain, and enterprise solutions.',
+    },
+    alternates: {
+        canonical: '/contact',
+    },
 }
 
 export default function Contact() {

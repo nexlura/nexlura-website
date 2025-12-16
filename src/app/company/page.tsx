@@ -4,20 +4,52 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { Gradient } from '@/components/Gradient'
-import { Heading, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/Text'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/Navbar'
 import Mission from "@/components/Mission"
 import { InnovationBackground } from '@/components/InnovationBackground'
+import { StructuredData } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'About Our Company | Nexlura',
+  title: 'About Nexlura | Software Development Company in Freetown, Sierra Leone',
   description:
-    'Learn about our mission, values, and commitment to helping businesses achieve more through innovative technology solutions.',
+    'Learn about Nexlura, a leading software development company based in Freetown, Sierra Leone. Discover our mission to help businesses worldwide through innovative AI, blockchain, and enterprise software solutions. Expert team delivering scalable digital products.',
+  keywords: [
+    'about nexlura',
+    'software development company sierra leone',
+    'freetown software developers',
+    'software company africa',
+    'nexlura team',
+    'software development mission',
+    'technology company sierra leone',
+    'custom software development company',
+    'AI software company',
+    'blockchain development company',
+    'enterprise software solutions',
+    'digital transformation company',
+  ],
   openGraph: {
-    title: 'About Our Company | Nexlura',
-    description: 'Learn about our mission, values, and commitment to helping businesses achieve more through innovative technology solutions.',
+    title: 'About Nexlura | Software Development Company in Freetown, Sierra Leone',
+    description: 'Learn about Nexlura, a leading software development company helping businesses worldwide through innovative AI, blockchain, and enterprise solutions.',
     type: 'website',
+    url: '/company',
+    images: [
+      {
+        url: '/team/founders.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nexlura Founders - Software Development Company',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Nexlura | Software Development Company',
+    description: 'Leading software development company in Freetown, Sierra Leone, helping businesses worldwide.',
+  },
+  alternates: {
+    canonical: '/company',
   },
 }
 
@@ -178,9 +210,45 @@ function TeamSection() {
   )
 }
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://nexlura.com'}/company`,
+  name: 'Nexlura',
+  image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://nexlura.com'}/logo-files/logo-icon.png`,
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nexlura.com',
+  telephone: '+232-79-712365',
+  email: 'nexlura@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '26a Black Hall Road, PWD, Kissy',
+    addressLocality: 'Freetown',
+    addressCountry: 'SL',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '8.4844',
+    longitude: '-13.2344',
+  },
+  priceRange: '$$',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+    ],
+    opens: '09:00',
+    closes: '17:00',
+  },
+}
+
 export default function Company() {
   return (
     <div className="overflow-hidden">
+      <StructuredData data={localBusinessSchema} />
       <Hero />
       <main>
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
